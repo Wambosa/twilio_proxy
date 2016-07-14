@@ -10,13 +10,13 @@ var actions = {
     "GET": {
         "get.test": testApi,
         "get.help": getHelp,
-        "get.testICS": cal.getTestICS,
-        "get.calendar": cal.generateCalendar
+        "get.testICS": cal.getTestICS
     },
 
     "POST": {
         "post.sendText": twil.sendTextToPhone,
-        "post.sendCalendar": cal.sendCalendar
+        "post.sendCalendar": cal.sendCalendar,
+        "get.calendar": cal.generateCalendar
     }
 };
 
