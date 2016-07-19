@@ -15,8 +15,7 @@ var actions = {
 
     "POST": {
         "post.sendText": twil.sendTextToPhone,
-        "post.sendCalendar": cal.sendCalendar,
-        "post.calendar": cal.generateCalendar
+        "post.sendCalendar": cal.sendCalendar
     }
 };
 
