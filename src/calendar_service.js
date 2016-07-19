@@ -5,7 +5,7 @@ function sendCalendar(options){
     return twil.sendAttachmentToPhone({
         phoneNumber: options.phoneNumber,
         plainText: options.plainText,
-        attachment: null,//todo: undo. this is hardcoded later
+        attachment: generateCalendar(options.calData),//todo: undo. this is hardcoded later
         mimeType: "text/calendar"
     });
 }
