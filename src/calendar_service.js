@@ -2,6 +2,25 @@ var twil = require('./twilio_service');
 var fs = require('fs');
 var moment = require('moment');
 
+
+function formatDate(d) {
+    // this is the format expected by iCal
+    // commented out to show you the failing test.
+    return d.utc().format('YYYYMMDDTHHmmSS') + 'Z';
+    //return d.format();
+}
+
+function makeID() {
+    var text = moment().format() + "-";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+
+    for (var i = 0; i < 15; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+
 function sendCalendar(options){
     return twil.sendAttachmentToPhone({
         phoneNumber: options.phoneNumber,
