@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "twilio": "*",
-    "url": "*"
+    "url": "*",
+    "moment": "*"
 
   }
 }
