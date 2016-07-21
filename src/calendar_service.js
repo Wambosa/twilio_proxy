@@ -63,7 +63,27 @@ function generateCalendar(clientData){
     return Promise.resolve(icsString.join('\n'));
 }
 
+function sendTestCalendar(){
+    return Promise.resolve(
+`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Santander Consumer//Payment Reminder//EN
+X-WR-CALNAME:Loan Payment Due
+BEGIN:VEVENT
+UID:2016-07-13T15:50:52-05:00-%eE$!CA4N&CLtoo
+DTSTART:20160501T050000Z
+DTEND:20160502T050000Z
+SUMMARY:Loan Payment Due
+DESCRIPTION:Please make sure to make the mininmum payment by the due date.
+RRULE:FREQ=MONTHLY;COUNT=3
+END:VEVENT
+END:VCALENDAR
+`);
+}
+
+
 module.exports = {
     "sendCalendar": sendCalendar,
-    "generateCalendar": generateCalendar
+    "generateCalendar": generateCalendar,
+    "sendTestCalendar": sendTestCalendar
 };
