@@ -10,7 +10,7 @@ var actions = {
     "GET": {
         "get.test": testApi,
         "get.help": getHelp,
-        "get.testICS": cal.getTestICS
+        "get.testICS": cal.sendTestCalendar
     },
 
     "POST": {
