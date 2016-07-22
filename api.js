@@ -11,12 +11,12 @@ var actions = {
         "get.test": testApi,
         "get.help": getHelp,
         "get.testICS": cal.sendTestCalendar,
-        "get.calendar": cal.sendCalendar
+        "get.calendar": cal.sendTestCalendar
     },
 
     "POST": {
         "post.sendText": twil.sendTextToPhone,
-        "post.sendCalendar": cal.sendCalendar
+        "post.sendCalendar": cal.sendTestCalendar
     }
 };
 
