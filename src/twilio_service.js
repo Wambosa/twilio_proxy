@@ -45,7 +45,7 @@ module.exports = {
         
         let phoneNumber = options.phoneNumber;
         let plainText = options.plainText;
-        let urlToAttachment = "http://104.219.52.168/get.calendar";
+        let urlToAttachment = "http://ec2-52-23-174-198.compute-1.amazonaws.com/get.calendar";
         
         let report = {
             error: null,
